@@ -12,12 +12,7 @@ public class Fight {
     }
 
     private static int whoHits() {
-        Random random = new Random();
-        return random.nextInt(2);
-    }
-
-    private static int whoGotHit(int whoHits) {
-        return whoHits == 0 ? 1 : 0;
+        return new Random().nextInt(2);
     }
 
     private static boolean isDead(Warrior warrior1, Warrior warrior2) {
@@ -40,7 +35,7 @@ public class Fight {
         int whoGotHit;
         while (!dead) {
             whoHits = whoHits();
-            whoGotHit = whoGotHit(whoHits);
+            whoGotHit = 1 - whoHits;
             hit(list.get(whoGotHit), list.get(whoHits));
             dead = isDead(list.get(whoGotHit), list.get(whoHits));
         }
