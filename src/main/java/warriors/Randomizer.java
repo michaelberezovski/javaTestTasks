@@ -6,8 +6,7 @@ import java.util.Random;
 public class Randomizer {
 
     private static int random() {
-        Random rand = new Random();
-        return rand.nextInt(3);
+        return new Random().nextInt(3);
     }
 
     private static Character generateCharacter(String name, String weapon, int attack) {
