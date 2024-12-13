@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="woodWindow" class="spring.lesson1_house.withSpringXMLsetting.WoodenWindow ">
+        <constructor-arg name="height" value="60"/>
+        <constructor-arg name="width" value="50"/>
+    </bean>
+    <bean id="plasticWindow" class="spring.lesson1_house.withSpringXMLsetting.PlasticWindow ">
+        <constructor-arg name="height" value="21"/>
+        <constructor-arg name="width" value="34 "/>
+    </bean>
+    <bean id="house" class="spring.lesson1_house.withSpringXMLsetting.HouseSpring">
+        <constructor-arg name="window" ref="plasticWindow"/>
+    </bean>
+
+</beans>
